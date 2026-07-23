@@ -9,7 +9,7 @@ data={
 }
 
 df=pd.DataFrame(data)
-print(df)
+#print(df)
 
 Standard_scaler=StandardScaler()
 Standard_scaled=Standard_scaler.fit_transform(df)
@@ -23,13 +23,18 @@ print(pd.DataFrame(Standard_scaled,columns=[["Study_hours","Test_Score"]]))
 print("\n output of Minmax_scaled")
 print(pd.DataFrame(minmax_scaled,columns=[["Study_hours","Test_Score"]]))
 
-
-X=df[["Study_hours"]]
-y=df[["Test_Score"]]
+X=df[["Study_hours"]]#input(X)
+y=df[["Test_Score"]]#output(y)
 
 x_train,x_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
-print("training data")
+print("training data of x ")
 print(x_train)
 
-print("testing data")
+print("testing data X")
 print(x_test)
+
+print("training data of y ")
+print(y_train)
+
+print("testing data y")
+print(y_test)
