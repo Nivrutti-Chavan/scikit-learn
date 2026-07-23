@@ -8,6 +8,7 @@ model.fit(X,y)
 Hours=float(input("Enter study of Hours="))
 
 Result=model.predict([[Hours]])[0]
+print(Result)
 if Result==1:
     print(f"from your study of {Hours} Hours You may be likely to PASS")
 else:
